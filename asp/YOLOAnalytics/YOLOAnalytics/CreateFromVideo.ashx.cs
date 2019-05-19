@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Web;
+using YOLOAnalytics.yolo;
 
 namespace YOLOAnalytics
 {
@@ -23,14 +25,11 @@ namespace YOLOAnalytics
                 num = q.GetValues("num");
             }
             int n = Convert.ToInt32(num[0]);
-            if (n < allData.Length)
-            {
-                Directory.CreateDirectory(Global.path + "\\img\\" + n);
-                string args = "-i " + allData[n] + " " + Global.path + "\\img\\" + n + "\\img%d.png";
-                ProcessStartInfo info = new ProcessStartInfo(Global.path + "\\ffmpeg\\ffmpeg.exe", "-i " + allData[n] + " " + Global.path +  "\\img\\" + n + "\\img%d.png");
-                info.CreateNoWindow = false;
-                Process processChild = Process.Start(info);
-            }
+            CreateData createData = new CreateData(allData[n]);
+            YoloItem[][] data = createData.GetRecognitionData();
+            string resultData = JsonConvert.SerializeObject(data);
+            File.AppendAllText(Global.path + "recognitionData\\" + n + ".json", resultData);
+            HTTPRequets.SendData(resultData);
         }
 
         public bool IsReusable
