@@ -1,0 +1,1 @@
+<img src="api/heatMap?cameraId=1&startTime=0&endTime=0">

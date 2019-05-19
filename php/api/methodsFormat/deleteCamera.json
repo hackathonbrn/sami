@@ -1,0 +1,10 @@
+{
+  "method": "deleteCamera",
+  "request": {
+    "cameraId": 1,
+    "objectId": 1
+  },
+  "response": {
+    "success": true
+  }
+}

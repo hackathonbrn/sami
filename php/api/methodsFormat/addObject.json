@@ -1,0 +1,10 @@
+{
+  "method": "addObjects",
+  "request": {
+    "objectName": "Имя объекта",
+    "objectDescription": "Описание объекта"
+  },
+  "response": {
+    "objectID": 21
+  }
+}

@@ -1,0 +1,5 @@
+AddDefaultCharset UTF-8
+php_flag session.use_only_cookies on
+Options All -ExecCGI -Indexes -Includes
+RewriteEngine on
+RewriteRule .* index.php

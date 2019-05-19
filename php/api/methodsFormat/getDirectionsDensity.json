@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "getDirectionsDensity",
+    "data": {
+      "cameraID" : 21,
+      "startTime" : 12315112,
+      "endTime" : 223124151
+    }
+  },
+  "response" : {
+    "percents" : [25, 75]
+  }
+}

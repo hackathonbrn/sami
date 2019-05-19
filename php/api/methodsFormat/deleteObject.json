@@ -1,0 +1,9 @@
+{
+  "method": "deleteObject",
+  "request": {
+    "objectId": 1
+  },
+  "response": {
+    "success": true
+  }
+}

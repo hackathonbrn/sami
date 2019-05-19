@@ -1,0 +1,16 @@
+{
+  "request" :{
+    "method" : "getDensity",
+    "data" : {
+      "startTime" : 120128312,
+      "endTime" : 120128312,
+      "cameraID" : 2
+    }
+  },
+  "response" : {
+    "dots" : {
+      "x" : [0, 1, 2, 3, 4, 5, 6, 7],
+      "y" : [1, 12, 1234, 12, 543, 63, 654, 44]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "request" : {
+    "method" : "getObjects",
+    "data" : {
+      "offset" : 0,
+      "limit" : 100
+    }
+  },
+  "response" : {
+    "objects" : [
+      {
+        "id" : 54,
+        "name" : "ТРЦ Арена",
+        "description" : "Приходите к нам"
+      },
+      {
+        "id" : 45,
+        "name" : "ТРЦ Алена",
+        "description" : "Плиходите к нам"
+      }
+    ]
+  }
+}
